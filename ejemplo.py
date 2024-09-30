@@ -10,8 +10,15 @@ class Coche:
     def frena(self):
         self.aceleracion -= 2
 
+    def acelera(self):
+        self.aceleracion += 4
+
 
 mi_coche = Coche(ruedas=4, aceleracion=3.5)
+
+mi_coche.mostrar_detalles()
+
+mi_coche.acelera()
 
 mi_coche.mostrar_detalles()
 
@@ -20,6 +27,10 @@ mi_coche.frena()
 mi_coche.mostrar_detalles()
 
 mi_moto_2=Coche(ruedas=2, aceleracion=2.5)
+
+mi_moto_2.mostrar_detalles()
+
+mi_moto_2.acelera()
 
 mi_moto_2.mostrar_detalles()
 
