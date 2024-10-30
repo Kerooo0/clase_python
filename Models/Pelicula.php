@@ -34,10 +34,9 @@
 		}
 
 		public function add(){
-			// La consulta original tiene un 'null' extra que causa error
-			$sql = "INSERT INTO peliculas (nombre, director, fecha, actor_principal, sinopsis, categoria_id, imagen) 
-					VALUES ('{$this->nombre}', '{$this->director}', '{$this->fecha}', '{$this->actor_principal}', 
-					'{$this->sinopsis}', '{$this->categoria_id}', '{$this->imagen}')";
+			$sql = "INSERT INTO peliculas (nombre, director, fecha, actor_principal, sinopsis, categoria_id, imagen)
+					VALUES (null, '{$this->nombre}', '{$this->director}', '{$this->fecha}', '{$this->actor_principal}',
+					'{$this->sinopsis}','{$this->categoria_id}','{$this->imagen}', NOW())";
 			$this->con->consultaSimple($sql);
 		}
 
